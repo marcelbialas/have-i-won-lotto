@@ -1,5 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 
+import Header from "~/components/ui/Header";
+import Hero from "~/components/ui/Hero";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "Have I Won Lotto?" },
@@ -12,5 +15,10 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <div className="font-sans p-4">Hello World.</div>;
+  return (
+    <div>
+      <Header />
+      <Hero />
+    </div>
+  );
 }
