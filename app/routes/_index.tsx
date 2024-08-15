@@ -1,7 +1,10 @@
+import { useState } from "react";
+
 import type { MetaFunction } from "@remix-run/node";
 
 import Header from "~/components/ui/Header";
 import Hero from "~/components/ui/Hero";
+import Result from "~/components/ui/Result";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,10 +18,20 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const [numbers, setNumbers] = useState<number[]>([]);
+
+  function addLottoNumbers(lottoNumbers: number[]) {
+    setNumbers(lottoNumbers);
+  }
+
   return (
     <div>
       <Header />
-      <Hero />
+      {numbers.length <= 0 ? (
+        <Hero setLottoNumbers={addLottoNumbers} />
+      ) : (
+        <Result />
+      )}
     </div>
   );
 }
