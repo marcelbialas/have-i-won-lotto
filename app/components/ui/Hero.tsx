@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Medal from "./../../assets/img/medal.png";
+import { Form } from "@remix-run/react";
 
 export default function Hero() {
   const [inputValue, setInputValue] = useState<string>("");
@@ -23,11 +24,11 @@ export default function Hero() {
       <h2 className="text-4xl text-center mb-4">
         Lets check your lucky numbers
       </h2>
-      <form className="w-full h-full" action="/result" method="POST">
+      <Form className="w-full h-full" action="/result" method="POST">
         <div className="w-full flex justify-center md:flex-row flex-col gap-2 md:gap-0">
           <input
             type="text"
-            name="numbers"
+            name="lottoNumbers"
             className="bg-gray-100 border-2 border-purple rounded-full py-3 px-6 md:w-1/2 w-full text-xl focus:outline-none focus:ring-0"
             placeholder="Type your lotto numbers, seperated by a comma"
             value={inputValue}
@@ -40,7 +41,7 @@ export default function Hero() {
             Check 🤑
           </button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 }
