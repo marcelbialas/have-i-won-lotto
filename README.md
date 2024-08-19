@@ -9,5 +9,5 @@
 - **Dynamic Feedback:** Provides feedback based on whether the numbers match past draws.
 
 ![App Overview](/app/assets/img/screenshots/app_overview.png?raw=true)
-![App Match Page](//app/assets/img/screenshots/app_won.png?raw=true)
+![App Match Page](/app/assets/img/screenshots/app_won.png?raw=true)
 ![App No Match Page](/app/assets/img/screenshots/app_notwon.png?raw=true)
